@@ -1,7 +1,6 @@
 # Rust - Tokio/Axum
 
-
-
+~~~bash
 cargo add axum tower-http tracing tracing-subscriber tokio serde serde_json hyper-util http_body_util mime@0.3 \
 --features tokio/full \
 --features hyper-util/client \
@@ -12,3 +11,4 @@ cargo add axum tower-http tracing tracing-subscriber tokio serde serde_json hype
 && cargo update --verbose
 cargo add --dev tower --features tower/util && cargo update --verbose
 cargo clean && cargo build && cargo test
+~~~
