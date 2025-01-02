@@ -14,19 +14,17 @@ args = ["clean"]
 description = "Compile le projet Rust."
 command = "cargo"
 args = ["build"]
-dependencies = ["clean"]
 
 [tasks.build-release]
 description = "Compile le projet Rust."
 command = "cargo"
 args = ["build", "--release"]
-dependencies = ["clean"]
 
 [tasks.test]
 description = "Exécute les tests du projet."
 command = "cargo"
 args = ["test"]
-dependencies = ["clean"]
+dependencies = ["build"]
 
 [tasks.install]
 description = "Installe le projet."
@@ -38,7 +36,8 @@ dependencies = ["format", "build-release", "test", "install"]
 
 [tasks.all]
 description = "Exécute toutes les tâches."
-dependencies = ["clean", "build", "test"]
+# dependencies = ["clean", "build", "test"]
+dependencies = ["build", "test"]
 
 [tasks.default]
 alias = "all"

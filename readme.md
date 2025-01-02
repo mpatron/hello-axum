@@ -16,4 +16,7 @@ cargo clean && cargo build && cargo test
 ~~~bash
 cargo make
 podman image ls --all
+podman run --detach --rm --publish 3000:3000 --name server --network=podman mpatron/server:latest
 ~~~
+
+podman exec -it server /bin/bash
