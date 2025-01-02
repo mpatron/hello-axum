@@ -50,4 +50,4 @@ spec:
               port: http
           env:
             - name: RUST_LOG
-              value: hello_rs=debug,api_version=debug,tower_http=debug,info
+              value: server=debug,api_version=debug,tower_http=debug,info

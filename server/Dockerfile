@@ -27,7 +27,7 @@ RUN adduser \
   appuser
 RUN chown -R appuser /usr/local/bin/server
 USER appuser
-# ENV RUST_LOG="hello_rs=debug,info"
+# ENV RUST_LOG="server=debug,info"
 WORKDIR /usr/local/bin/
 
 EXPOSE 3000
