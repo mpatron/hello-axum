@@ -19,4 +19,14 @@ podman image ls --all
 podman run --detach --rm --publish 3000:3000 --name server --network=podman mpatron/server:latest
 ~~~
 
-podman exec -it server /bin/bash
+Dans un terminal
+
+~~~bash
+podman logs --follow server
+~~~
+
+Dans un autre
+
+~~~bash
+podman exec -it server curl localhost:3000
+~~~
