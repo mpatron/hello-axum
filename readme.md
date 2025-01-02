@@ -29,4 +29,7 @@ Dans un autre
 
 ~~~bash
 podman exec -it server curl localhost:3000
+podman exec -it server curl localhost:3000/requires-connect-info
 ~~~
+
+https://www.julienrollin.com/posts/rust-axum-part-1
