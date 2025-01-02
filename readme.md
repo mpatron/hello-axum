@@ -12,3 +12,8 @@ cargo add axum tower-http tracing tracing-subscriber tokio serde serde_json hype
 cargo add --dev tower --features tower/util && cargo update --verbose
 cargo clean && cargo build && cargo test
 ~~~
+
+~~~bash
+cargo make
+podman image ls --all
+~~~
