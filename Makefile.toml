@@ -13,7 +13,7 @@ args = ["make", "podman-image"]
 [tasks.server-run]
 description = "Lancement du serveur."
 command = "podman"
-args = ["run", "--replace", "--name", "server", "-ti", "--detach", "--rm", "--publish", "3000:3000", "--network=host", "server:latest"]
+args = ["run", "--replace", "--name", "server", "-ti", "--detach", "--rm", "--publish", "3000:3000", "--network=host", "mpatron/server:latest"]
 dependencies = ["build-client", "build-server"]
 
 [tasks.all]
